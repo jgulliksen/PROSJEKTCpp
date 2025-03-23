@@ -17,7 +17,8 @@ std::string name = "Huskeliste";
 //Funksjonen som lager vinduet
 void animation(){
 
-
+    removeButtonClass::AnimationWindow window(windowX, windowY, windowWidth, windowHight, name);
+    
     const TDT4102::Point buttonPosition {windowWidth/2, windowHight/5};
     TDT4102::Button button {buttonPosition, 100, 30, "Legg til"};
     button.setCallback(callbackFunction);
@@ -25,8 +26,6 @@ void animation(){
 
 
 
-
-    AnimationWindow window(windowX, windowY, windowWidth, windowHight, name);
     window.add(button);
     while(!window.should_close()){
 

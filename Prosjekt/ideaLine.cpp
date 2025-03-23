@@ -38,3 +38,8 @@ void removeButtonClass::removeButtonFunc() {
 }
 
 
+removeButtonClass::removeButtonClass() : AnimationWindow(), removeButton({0, 0}, 100, 30, "Fjern") {
+    removeButton.setCallback(std::bind(&removeButtonClass::removeButtonFunc, this));
+    add(removeButton);
+    
+}
